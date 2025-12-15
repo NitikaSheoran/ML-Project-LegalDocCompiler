@@ -1,16 +1,162 @@
-# React + Vite
+📄 Legal Document Analyzer (PDF → Key Clause Extraction)
+🧠 Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Legal Document Analyzer is an ML-powered application that analyzes legal PDF documents and automatically extracts answers to 42 critical legal clauses commonly required for contract review, compliance, and due diligence.
 
-Currently, two official plugins are available:
+Users upload a legal document (PDF), which is processed by an NLP/ML model trained for question–answering over legal text. The system scans the document and displays:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Extracted answer (if found)
 
-## React Compiler
+❌ “Not Found” (if the clause is missing)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This tool significantly reduces manual effort in reviewing lengthy legal agreements.
 
-## Expanding the ESLint configuration
+🎯 Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📑 Upload legal PDF documents
+
+🧠 ML-based legal question answering
+
+⚖️ Extracts 42 high-impact legal clauses
+
+⏱️ Fast and automated analysis
+
+📊 Clear on-screen results (Found / Not Found)
+
+🧩 Modular pipeline (PDF parsing → chunking → inference → display)
+
+📌 Extracted Legal Clauses (42)
+
+The system attempts to identify the following clauses:
+
+Affiliate License – Licensee
+
+Affiliate License – Licensor
+
+Agreement Date
+
+Anti-Assignment
+
+Audit Rights
+
+Cap on Liability
+
+Change of Control
+
+Competitive Restriction Exception
+
+Covenant Not to Sue
+
+Document Name
+
+Effective Date
+
+Exclusivity
+
+Expiration Date
+
+Governing Law
+
+Insurance
+
+IP Ownership Assignment
+
+Irrevocable or Perpetual License
+
+Joint IP Ownership
+
+License Grant
+
+Liquidated Damages
+
+Minimum Commitment
+
+Most Favored Nation
+
+No-Solicit of Customers
+
+No-Solicit of Employees
+
+Non-Compete
+
+Non-Disparagement
+
+Non-Transferable License
+
+Notice Period to Terminate Renewal
+
+Parties
+
+Post-Termination Services
+
+Price Restrictions
+
+Renewal Term
+
+Revenue or Profit Sharing
+
+ROFR / ROFO / ROFN
+
+Source Code Escrow
+
+Termination for Convenience
+
+Third-Party Beneficiary
+
+Uncapped Liability
+
+Unlimited or All-You-Can-Eat License
+
+Volume Restriction
+
+Warranty Duration
+
+Any Other Important Terms 
+
+
+
+
+PDF Upload
+   ↓
+PDF Text Extraction
+   ↓
+Text Chunking
+   ↓
+Semantic Filtering (Embeddings)
+   ↓
+Legal QA ML Model
+   ↓
+Clause-wise Answer Extraction
+   ↓
+UI Output (Answer / Not Found)
+
+
+🚀 How It Works
+
+User uploads a legal PDF document
+
+Text is extracted and split into overlapping chunks
+
+Each chunk is semantically matched with predefined legal questions
+
+The ML QA model extracts precise answers
+
+Results are displayed:
+
+Clause Name
+
+Extracted Answer OR “Not Found”
+
+
+
+🔮 Future Enhancements
+
+📌 Confidence score per clause
+
+🧾 Clause highlighting in original PDF
+
+🌐 Multi-language legal documents
+
+☁️ Cloud deployment & API access
+
+📊 Export results as CSV / JSON
